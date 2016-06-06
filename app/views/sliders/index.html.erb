@@ -1,0 +1,89 @@
+<%= f7_app do %>
+
+<% end %>
+
+<%= f7_panel :position => :left do %>
+<%= f7_navbar :position => :left do %>
+
+    <ul>
+      <li class="home-icon"><a href="index.html" class="close-panel">Home</a></li>
+      <li class="about-icon"><a href="about.html" class="close-panel">About</a></li>
+      <li class="features-icon"><a href="features.html" class="close-panel">Features</a></li>
+      <li class="photos-icon"><a href="photos.html" class="close-panel">Gallery</a></li>
+      <li class="video-icon"><a href="videos.html" class="close-panel">Videos</a></li>
+      <li class="blog-icon"><a href="blog.html" class="close-panel">Blog</a></li>
+      <li class="contact-icon"><a href="/sliders/new" class="close-panel">Contact</a></li>
+    </ul>
+
+
+
+<% end %>
+<% end %>
+
+<div class="panel panel-right panel-cover">
+  <div class="user_login_info">
+    <h2>Hi, username</h2>
+    <p>Edit your account settings</p>
+    <nav class="list-nav-small">
+      <ul>
+        <li class="about-icon"><a href="about.html" class="close-panel">Profile</a></li>
+        <li class="tools-icon"><a href="features.html" class="close-panel">Settings</a></li>
+        <li class="lock-icon"><a href="features.html" class="close-panel">Account</a></li>
+        <li class="envelope-icon"><a href="features.html" class="close-panel">Messages</a></li>
+        <li class="heart-icon"><a href="features.html" class="close-panel">Favorites</a></li>
+        <li class="download-icon"><a href="features.html" class="close-panel">Downloads</a></li>
+        <li class="logout-icon"><a href="index.html" class="close-panel">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<%= f7_views do %>
+    <!-- Other Content -->
+    <%= f7_view 'main' do %>
+
+        <%= f7_pages :navbar => :through do %>
+            <%= f7_page :home do %>
+
+                <div class="page-content">
+
+                  <!-- Slider -->
+                  <div class="swiper-container swiper-init" data-effect="coverflow" data-pagination=".swiper-pagination">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <span>THE <br /> CREATIVE</span>
+                        <span class="subtitle">mobile app solution</span>
+                        <a href="about.html" class="swiper_read_more">swipe to see more</a>                      </div>
+                      <div class="swiper-slide">
+                        <span>WITH <br />BEAUTIFUL</span>
+                        <span class="subtitle">multipurpose designs</span>
+                        <a href="features.html" class="swiper_read_more">see all features</a>                      </div>
+                      <div class="swiper-slide">
+                        <span>READY <br /> FOR APPS</span>
+                        <span class="subtitle">web and native</span>
+                        <a href="#" class="swiper_read_more open-panel">start navigating</a>                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+
+            <% end %>
+        <% end %>
+
+
+
+
+        <%= f7_toolbar do %>
+  <div class="toolbar-inner">
+    <ul class="toolbar_icons icons_4row">
+      <li><a href="#" data-popup=".popup-login" class="open-popup"><img src="images/icons/white/user.png" alt="" title="" /></a></li>
+      <li><a href="/sliders/new"><%= image_tag 'icons/white/settings.png' %></a></li>
+      <li><a href="photos.html"><img src="images/icons/white/photos.png" alt="" title="" /></a></li>
+      <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/white/heart.png" alt="" title="" /></a></li>
+    </ul>
+  </div>
+<% end %>
+        <% end %>
+<% end %>
